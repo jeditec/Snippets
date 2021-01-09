@@ -2,20 +2,20 @@ systemctl enable rc-local
 
 nano /etc/systemd/system/rc-local.service
 
-[Unit]
- Description=/etc/rc.local Compatibility
- ConditionPathExists=/etc/rc.local
+>[Unit]
+> Description=/etc/rc.local Compatibility
+> ConditionPathExists=/etc/rc.local
 
-[Service]
- Type=forking
- ExecStart=/etc/rc.local start
- TimeoutSec=0
- StandardOutput=tty
- RemainAfterExit=yes
- SysVStartPriority=99
+>[Service]
+> Type=forking
+> ExecStart=/etc/rc.local start
+> TimeoutSec=0
+> StandardOutput=tty
+> RemainAfterExit=yes
+> SysVStartPriority=99
 
-[Install]
- WantedBy=multi-user.target
+>[Install]
+> WantedBy=multi-user.target
  
  nano /etc/rc.local
  
