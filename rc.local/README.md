@@ -1,7 +1,7 @@
 systemctl enable rc-local
 
 nano /etc/systemd/system/rc-local.service
-
+```
 >[Unit]
 > Description=/etc/rc.local Compatibility
 > ConditionPathExists=/etc/rc.local
@@ -16,7 +16,7 @@ nano /etc/systemd/system/rc-local.service
 
 >[Install]
 > WantedBy=multi-user.target
- 
+ ```
  nano /etc/rc.local
  
  #!/bin/bash
